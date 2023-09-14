@@ -48,8 +48,14 @@ void riam(int arr[3][3],int row,int col,int srcx,int srcy, vector<vector<bool>>&
 int main()
 {
     int arr[3][3]={{1,0,0},
-                 {1,1,0},
+                 {0,1,0},
                  {1,1,1}};
+    if(arr[0][0]==0){
+        cout<<"No result found"<<endl;
+        return 0;
+    }
+    
+    
     int row = 3;
     int col = 3;
     vector<vector<bool>>visited(row,vector<bool>(col,false));
@@ -64,5 +70,9 @@ int main()
         cout<<i<<" ";
     }
     cout<<endl;
+    
+    if(path.size()==0){
+        cout<<"No"<<endl;
+    }
   return 0;
 }
